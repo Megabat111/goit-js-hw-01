@@ -13,14 +13,14 @@ console.log(quantityDroid);
 
 if (quantityDroid === null) {
     message = 'Отменено пользователем!';
-    alert(message);
+    
 } else { totalPrice = quantityDroid * pricePerDroid;
     if (totalPrice > credits) {
-        alert(` Общая сумма Вашего заказа составила ${totalPrice} кредитов. Но на Вашем счету недостаточно средств!`);
+        message = ` Общая сумма Вашего заказа составила ${totalPrice} кредитов. Но на Вашем счету недостаточно средств!`;
     } else {
 
-        alert(` Вы купили ${quantityDroid} дроидов, на счету у Вас осталось  ${credits - totalPrice} кредитов.`);
+        message = ` Вы купили ${quantityDroid} дроидов, на счету у Вас осталось  ${credits - totalPrice} кредитов.`;
     }
 }
 
-
+alert(message);
